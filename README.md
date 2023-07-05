@@ -1,27 +1,21 @@
-# CodesaTechTestFront
+# Codesa Frontend Test
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.3.
+## Link a la aplicación:
 
-## Development server
+## Credenciales de administrador:
+* usuario: darioparejadiaz
+* contraseña: admin1234
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Descripción
+### Rutas:
+Esta aplicación cuenta con un router de 4 posibles paths:
+* "/" la cual redigirirá a "/login" si hay no se ha logeado
+* "/login": ruta por defecto
+* "/users": Muestra la lista de usuarios y formulario de creación/actualización
+* "/not-found": Ruta por defecto para cualquier path que no coincida con los anteriormente mencionados
 
-## Code scaffolding
+### Guardian:
+Esta aplicación cuenta con un guardian de acceso hacia el path "/users", el cual no permite la navegación hacia dicha ruta si no se está logueado con las credenciales de administrador.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+### datos 
+Esta aplicación no se encuentra conectada a ningún backend con base de datos, por lo cual todos los datos de usuarios y administrador se cargarán en memoria una vez ejecutado el programa. Toda manipulación de datos a través de operaciones CRUD persistirán siempre que la aplicación no se reinicie.
