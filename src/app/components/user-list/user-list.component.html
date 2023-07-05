@@ -1,0 +1,7 @@
+<div class="users-list-container">
+  <h2>Users List</h2>
+  <button class="btn" *ngIf="showAddUserBtn" (click)="onDisplayForm()">
+    Add new user
+  </button>
+  <app-user-card *ngFor="let user of users" [user]="user"></app-user-card>
+</div>

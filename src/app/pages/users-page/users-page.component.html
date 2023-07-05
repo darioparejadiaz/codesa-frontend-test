@@ -1,0 +1,16 @@
+<div class="users-page-container">
+  <nav class="nav-bar">
+    <img class="logo" src="../../../assets/images/codesa-logo-3d.png" alt="" />
+    <button class="btn logout-btn" (click)="onLogOut()">Log Out</button>
+  </nav>
+  <main class="main-container">
+    <app-user-form
+      *ngIf="displayForm"
+      (hideForm)="onHideForm($event)"
+    ></app-user-form>
+    <app-user-list
+      [showAddUserBtn]="showAddUserBtn"
+      (displayForm)="onDisplayForm($event)"
+    ></app-user-list>
+  </main>
+</div>

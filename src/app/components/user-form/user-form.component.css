@@ -1,0 +1,20 @@
+.form-container {
+  display: grid;
+  gap: 20px;
+}
+
+.input-container {
+  display: grid;
+}
+
+.input {
+  border: 1px solid lightgray;
+}
+
+.warn {
+  color: red;
+}
+
+.btn-submit {
+  margin-right: 21px;
+}

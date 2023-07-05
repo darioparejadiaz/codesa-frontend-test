@@ -1,0 +1,16 @@
+<div class="user-card-container">
+  <h3>{{ user.name }} {{ user.lastName }}</h3>
+  <p><strong>Email: </strong>{{ user.email }}</p>
+  <p><strong>Phone: </strong>{{ user.phone }}</p>
+  <p style="margin-bottom: 12px">
+    <strong>Address: </strong>{{ user.address }}
+  </p>
+  <button
+    style="margin-right: 16px"
+    class="btn-secondary"
+    (click)="onEditUser(user.id)"
+  >
+    Edit
+  </button>
+  <button class="btn-secondary" (click)="onDeleteUser(user.id)">Delete</button>
+</div>

@@ -1,0 +1,32 @@
+<div class="login-page-container">
+  <form class="form-container" [formGroup]="loginForm" (ngSubmit)="onLogin()">
+    <img
+      class="logo"
+      src="../../../assets/images/codesa-logo-3d.png"
+      alt="Logo Codesa"
+    />
+    <div class="input-container">
+      <label for="username">Username:</label>
+      <input
+        class="input"
+        type="text"
+        id="username"
+        formControlName="username"
+      />
+    </div>
+
+    <div class="input-container">
+      <label for="password">Password:</label>
+      <input
+        class="input"
+        type="password"
+        id="password"
+        formControlName="password"
+      />
+    </div>
+    <p class="warn" *ngIf="incorrectCredentialsStatus">
+      <strong>Username or password incorrect</strong>
+    </p>
+    <button class="btn" type="submit">Login</button>
+  </form>
+</div>

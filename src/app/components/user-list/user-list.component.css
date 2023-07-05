@@ -1,0 +1,4 @@
+.users-list-container {
+  display: grid;
+  gap: 20px;
+}

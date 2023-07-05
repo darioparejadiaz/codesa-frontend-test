@@ -1,0 +1,71 @@
+<div class="user-form-container">
+  <form class="form-container" [formGroup]="userForm" (ngSubmit)="onSaveUser()">
+    <h2>User Form</h2>
+    <div class="input-container">
+      <label for="name">Name:</label>
+      <input class="input" type="text" id="name" formControlName="name" />
+      <p
+        class="warn"
+        *ngIf="getName()?.errors?.['required'] && getName()?.touched"
+      >
+        Name is required
+      </p>
+    </div>
+
+    <div class="input-container">
+      <label for="lastName">Last Name:</label>
+      <input
+        class="input"
+        type="text"
+        id="lastName"
+        formControlName="lastName"
+      />
+      <p
+        class="warn"
+        *ngIf="getLastName()?.errors?.['required'] && getLastName()?.touched"
+      >
+        Last Name is required
+      </p>
+    </div>
+
+    <div class="input-container">
+      <label for="email">Email:</label>
+      <input class="input" type="email" id="email" formControlName="email" />
+      <div *ngIf="getEmail()?.touched">
+        <p class="warn" *ngIf="getEmail()?.errors?.['required'] ">
+          Email is required
+        </p>
+        <p class="warn" *ngIf="getEmail()?.errors?.['email']">
+          Valid email format is required
+        </p>
+      </div>
+    </div>
+
+    <div class="input-container">
+      <label for="phone">Phone:</label>
+      <input class="input" type="number" id="phone" formControlName="phone" />
+
+      <p
+        class="warn"
+        *ngIf="getPhone()?.errors?.['required'] && getPhone()?.touched"
+      >
+        Phone number is required
+      </p>
+    </div>
+
+    <div class="input-container">
+      <label for="address">Address:</label>
+      <input class="input" type="text" id="address" formControlName="address" />
+      <p
+        class="warn"
+        *ngIf="getAddress()?.errors?.['required'] && getAddress()?.touched"
+      >
+        Address is required
+      </p>
+    </div>
+    <div>
+      <button class="btn-secondary btn-submit" type="submit">Save</button>
+      <button class="btn-secondary" (click)="onHideForm()">Cancel</button>
+    </div>
+  </form>
+</div>

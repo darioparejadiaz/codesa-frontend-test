@@ -1,0 +1,45 @@
+.login-page-container {
+  width: 100%;
+  height: 100vh;
+  padding: 20px;
+  background: linear-gradient(to bottom right, #e2b9b1, #b99ba9);
+
+  display: grid;
+  place-items: center;
+}
+
+.logo {
+  width: 100%;
+  max-width: 150px;
+}
+
+.form-container {
+  width: 100%;
+  max-width: 600px;
+  padding: 32px;
+  border-radius: 16px;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.6);
+
+  display: grid;
+  place-items: center;
+  gap: 32px;
+}
+
+.input-container {
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+
+.input-container label {
+  display: block;
+  margin-bottom: 4px;
+}
+
+.input-container input {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.warn {
+  color: red;
+}

@@ -1,1 +1,61 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+button {
+  font-family: "Roboto", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+.btn {
+  width: 100%;
+  max-width: 300px;
+  min-width: 200px;
+  padding: 16px;
+  border: none;
+  border-radius: 8px;
+  background-color: dodgerblue;
+  color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.btn:active {
+  position: relative;
+  top: 1px;
+  background-color: rgb(17, 105, 194);
+}
+
+.btn-secondary {
+  width: 80px;
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  background-color: rgb(223, 115, 72);
+  color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.btn-secondary:active {
+  position: relative;
+  top: 1px;
+  background-color: rgb(131, 46, 6);
+}
+
+.input {
+  width: 100%;
+  max-width: 300px;
+  min-width: 200px;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+}
